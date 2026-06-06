@@ -1,38 +1,80 @@
-# CLOUD-STORAGE-CREATION-S3-AND-LAUNCHING-AN-EC2-INSTANCE-IN-AWS-
+# Ex No 2: CLOUD-STORAGE-CREATION-S3-AND-LAUNCHING-AN-EC2-INSTANCE-IN-AWS-
 
-# AIM :
-To create an AWS account, set up a root user, and create an IAM user with specified permissions.
+# reg no:212224100040
+# name: Nather Nabeel S.A.C
 
-# PROBLEM STATEMENT :
-This experiment involves creating an AWS account, configuring security settings for the root user, and setting up an IAM user. IAM users allow for secure, managed access to AWS resources without exposing the main account's root credentials.
+# Aim:
+To create a Simple Storage Service (S3) in AWS and to launch an EC2 instance in AWS.
 
-# Procedure:
-Sign in to the AWS Management Console: • Go to the AWS Management Console and log in with your AWS credentials.
-Navigate to the EC2 Dashboard: • Once logged in, locate and click on the "EC2" service in the AWS Management Console.
-Launch an Instance: • On the EC2 dashboard, click the "Launch Instance" button.
-Choose an AMI (Amazon Machine Image):
-• Select the operating system and software you want to use for your instance (e.g., Amazon Linux, Ubuntu, Windows). • Click "Select" to choose the AMI.
-Choose an Instance Type: • Select the type of instance you need (e.g., t2.micro, m5.large) based on your workload requirements. • Click "Next: Configure Instance Details".
-Configure Instance Details: • Set the number of instances to launch, the availability zone, and other optional settings like networking and security. • Click "Next: Add Storage".
-Configure Storage: • Specify the size and type of storage for your instance. • Click "Next: Add Tags".
-Add Tags (Optional): • Add tags to your instance for easier identification and management. • Click "Next: Configure Security Group".
-Configure Security Group:
-• Choose or create a security group to control inbound and outbound traffic to your instance. • Click "Review and Launch".
-Review and Launch:
-• Review all the configurations and click "Launch".
-Create a Key Pair (if you haven't already): • You'll be prompted to create a new key pair or choose an existing one. • Download the key pair (.pem file) and store it securely.
-Launch the Instance: • Click "Launch Instance" to start the instance creation process.
-Connect to your Instance:
-• Once the instance is running, you can connect to it using SSH (for Linux) or RDP (for Windows). • Use the key pair you downloaded earlier to connect.
+# Procedure
+a) Steps to Create a first S3 Bucket:
 
-# output
-<img width="1142" height="604" alt="image" src="https://github.com/user-attachments/assets/d65f4f7b-701c-4757-9214-c4ee68a8f31b" />
+Step 1: Sign in to the AWS Management Console Go to https://console.aws.amazon.com/s3. 
 
-<img width="1151" height="633" alt="image" src="https://github.com/user-attachments/assets/648cccd7-e6c6-4fa8-a8ca-a52d1e4c5186" />
+Step 2: Open the S3 Service In the console, type S3 in the search bar and select S3 to open the service dashboard. 
 
-<img width="1152" height="593" alt="image" src="https://github.com/user-attachments/assets/efa940ab-f5f9-421b-be5e-ccac608865e0" />
+Step 3: Create Bucket Click the Create bucket button. 
 
-<img width="1152" height="635" alt="image" src="https://github.com/user-attachments/assets/932bd786-df15-4c2d-9bf9-a9d14229c21d" />
+Step 4: Configure Bucket Settings
 
- # RESULT
-The AWS account was successfully created, with set up for the root user . Additionally, an IAM user was created with specified permissions, allowing for secure, controlled access to AWS resources without the use of the root account.
+• Bucket name: Choose a globally unique name. • AWS Region: Select the region where you want to store your data.
+
+Step 5: Object Ownership Choose between: ▪ ACLs disabled (recommended) – Bucket owner has full control. ▪ ACLs enabled – Control access via access control lists.
+
+Step 6: Block Public Access Settings By default, all public access is blocked. Leave it as-is unless you need public access. 
+
+Step 7: Bucket Versioning (optional) Choose whether to enable versioning for objects in the bucket.
+
+Step 8: Encryption (optional) Select encryption options (SSE-S3, SSE-KMS, or none). 
+
+Step 9: Advanced Settings (optional) Add tags, configure logging, etc. 
+
+Step 10: Create the Bucket Click Create bucket at the bottom of the page.
+
+b) i. Steps to launch an EC2 Instance
+
+Go to the EC2 Dashboard in AWS Console.
+
+Click on “Launch Instance”.
+
+Choose an Amazon Machine Image (AMI) (e.g., Amazon Linux).
+
+Select an instance type (e.g., t2.micro for Free Tier).
+
+Create or choose a key pair for SSH access.
+
+Configure network settings (use default VPC/subnet).
+
+Configure storage (default root volume is fine).
+
+Review the settings and click “Launch Instance”.
+
+Wait for the instance to enter the running state.
+
+c) Step 3: Connect to Your Instance
+
+• Linux: Use SSH command with your .pem key. • Windows: Use RDP with decrypted admin password.
+
+d) Steps to Clean Up (Terminate the Instance)
+
+Go to EC2 Instances.
+Select your instance → Instance State → Terminate.
+
+# Output:
+
+Simple Storage Service:
+![image](https://github.com/user-attachments/assets/b5b20c71-5e0f-4096-b467-2f6bb540242a)
+
+
+EC2(Elastic Cloud Compute)
+![image](https://github.com/user-attachments/assets/39f84549-0246-4f1b-8320-ffba5f042896)
+
+
+
+
+
+
+# Result:
+Thus, a Simple Storage Service (S3) and EC2 (Elastic Compute Cloud) - instance has been successfully created and launched in AWS
+
+
