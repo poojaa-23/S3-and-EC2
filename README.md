@@ -1,7 +1,7 @@
 # Ex No 2: CLOUD-STORAGE-CREATION-S3-AND-LAUNCHING-AN-EC2-INSTANCE-IN-AWS-
 
-# reg no:212224100040
-# name: Nather Nabeel S.A.C
+# reg no:212223100041
+# name: S.pooja abirami
 
 # Aim:
 To create a Simple Storage Service (S3) in AWS and to launch an EC2 instance in AWS.
